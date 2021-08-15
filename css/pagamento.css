@@ -1,0 +1,28 @@
+.cards {
+	height:250px;
+  position:relative;
+	transform-style: preserve-3d;
+  transition: transform 0.6s;
+
+}
+
+
+
+.card-body{
+	backface-visibility: hidden;
+	border-radius: 10px;
+  height: 100%;
+	position: absolute;
+	width: 85%;
+}
+
+#card_back{
+  transform: rotateY(180deg);
+	padding:0px;
+}
+
+.magnetic-stripe{
+	background-color: black;
+	height:35px;
+	margin-top: 5px;
+}
