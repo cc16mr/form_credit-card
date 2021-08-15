@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Aula 10 - Form de Endereço</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  </head>
+  <body class="container" style="background-color: #DDDDDD;">
+    <section class="row mt-5">
+      <div class="col-md-6 offset-3">
+          <div class="card card-body">
+            <h2>Cadastro de Endereço</h2>
+            <hr>
+
+            <form id="form-endereco">
+              <label for="cep">CEP</label>
+              <input type="number" min="0" id="cep" class="form-control mb-3" placeholder="Apenas números">
+
+              <label for="logradouro">Logradouro</label>
+              <input type="text" id="logradouro" class="form-control mb-3" placeholder="Rua, Av, Travesa...">
+
+              <label for="numero">Número</label>
+              <input type="number" min="0" id="numero" class="form-control mb-3" placeholder="999">
+
+              <label for="bairro">Bairro</label>
+              <input type="text" id="bairro" class="form-control mb-3" placeholder="Informe o bairro">
+
+              <label for="cidade">Cidade</label>
+              <input type="text" id="cidade" class="form-control mb-3" placeholder="Informe a cidade">
+
+              <label for="uf">UF</label>
+              <input type="text" id="uf" class="form-control mb-3" placeholder="Informe o estado">
+
+              <button style="width: 100%;" class="btn btn-primary">ENVIAR</button>
+
+            </form>
+          </div>
+      </div>
+    </section>
+
+    <script src="js/eventos.js"></script>
+  </body>
+</html>

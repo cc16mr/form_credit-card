@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/pagamento.css">
+	</head>
+	<body class="container bg-secondary">
+		<section class="row container mt-5 align-items-center" >
+		  <div class="col-md-6 cards " id="credit-card">
+				<!--Image downloaded from:https://www.wallpapersin4k.org/images/606187-->
+		    <article class="card card-body text-white" style="background-image: url('./img/wallpaperflare.com_wallpaper.jpg'); background-size:500px" id="card_front">
+
+					<span class="d-flex flex-row-reverse">
+						<p class="fs-2">Credit Card</p>
+					</span>
+
+					<span class="d-flex justify-content-between ms-2 me-2 mt-0 pt-0">
+						<!--Image downloaded from: https://www.klipartz.com/en/sticker-png-gteiz/download-->
+						<div><img src="./img/chip.png" height="45"></div>
+						<div><img src="./img/mastercard.svg" height="45"></div>
+					</span>
+
+				 	<span class="row ms-2 mt-3">
+						<p id="card-number" class="fs-3 font-monospace">0000 0000 0000 0000</p>
+					</span>
+
+					<span class="row ms-2">
+						<span id="card-name" class="col fs-6 font-monospace">JOSÉ DA SILVA SOARES</span>
+						<span id="card-date" class="col fs-6">MM/YY</span>
+					</span>
+
+		      <br>
+
+		    </article>
+
+
+		    <article class="card card-body bg-warning" id="card_back">
+		      <br>
+					<div class="magnetic-stripe mt-4">
+					</div>
+
+					<div class="row px-5 pt-5">
+						<span class="col-md-7 mx-2" style="background-image: url('./img/stripes.jpeg'); background-size:200px" >Assinatura</span>
+			      <span class="col-md-3" style="background-color:white;" id="card-cvv" class="h4 font-monospace">000</span>
+					</div>
+
+		      <br>
+
+		    </article>
+
+
+		  </div>
+		  <div class="col-md-6">
+		    <div class="form-control px-5 bg-light">
+		      <h1 class="text-center text-muted">Pagamento</h1>
+		      <hr>
+		      <form class="form" action="">
+		        <label for="number">Número do cartão</label><br>
+		        <input
+							class="input-group form-control"
+		          type="text"
+							pattern="[0-9]{16}"
+							maxlength="16"
+							title="A sequência deve conter 16 dígitos. Por favor, tente novamente."
+		          id="number"
+		          placeholder="Ex: 1234 1234 1234 1234"
+		          required
+						>
+						<br>
+
+		        <label for="code">Código de segurança do cartão</label><br>
+		        <input
+							class="input-group form-control"
+			        type="text"
+		          id="code"
+		          pattern="[0-9]{3}"
+							maxlength="3"
+							title="Por favor, insira 3 dígitos"
+		          placeholder="Ex: 123"
+		          required
+		        >
+		        <br>
+
+		        <label for="expiration">Data de validade</label>
+		        <br>
+						<div class="input-group">
+		        <select  class="form-select" id="month" data-action="date">
+		          <option selected disabled>Mês</option>
+		          <option value="01">Janeiro</option>
+		          <option value="02">Fevereiro</option>
+		          <option value="03">Março</option>
+		        </select>
+		        <select class="form-select" id="year" data-action="date">
+		          <option selected disabled>Ano</option>
+		          <option value="2021">2021</option>
+		          <option value="2022">2022</option>
+		          <option value="2023">2023</option>
+		        </select>
+						</div>
+		        <br>
+
+		        <label for="name">Nome do titular</label><br>
+		        <input class="input-group form-control"
+						type="text"
+						id="name"
+						minlength="5"
+						maxlength="30"
+						title="O nome deve conter entre 5 e 30 caracteres. Abreviações são permitidas, pelo menos o primeiro nome e o último sobrenome devem estar completos. "
+						required>
+						<br>
+
+		        <label for="cpf">CPF do titular do cartão</label><br>
+		        <input
+							class="input-group form-control"
+		          type="text"
+		          id="cpf"
+
+		          placeholder="Ex: 123.123.123-12"
+		          required
+		        >
+		        <br>
+						<div class="d-grid gap-2 pb-3">
+		        	<button class="btn btn-warning">Enviar</button>
+						</div>
+		      </form>
+		    </div>
+		  </div>
+
+		</section>
+
+		  <script src="js/eventos.js">
+			<script src="js/getFlag.js">
+
+		  </script>
+	</body>
+</html>
